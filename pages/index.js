@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
@@ -7,12 +6,19 @@ import Date from '../components/date'
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <Layout home title="Home">
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
+        <p>
+          Full-stack developer, testing Next.js, on SSR && Static Generation.
+          A simple hybrid, just go to{' '}
+          <Link href="/api/post">
+            <a>API post</a>
+          </Link>{' '}
+          to see SSR–AND–
+          <Link href="/batman">
+            <a>Batman Series Documentation</a>
+          </Link> for Hybrid.
+        </p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)

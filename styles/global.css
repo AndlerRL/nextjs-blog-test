@@ -6,6 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background-color: #f5f5f5;
 }
 
 * {
@@ -21,7 +22,32 @@ a:hover {
   text-decoration: underline;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+@media (prefers-color-scheme: dark) {
+  body {
+    filter: invert(1);
+  }
+  
+  img {
+    filter: invert(1);
+  }
+}
+
+@keyframes border {
+  from {
+    border-left-width: 50vw;
+    border-right-width: 50vw;
+  }
+  to {
+    border-left-width: 10px;
+    border-right-width: 10px;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
