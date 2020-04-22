@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken'
+const jwt = require('jsonwebtoken')
 
 export default (req, res) => {
   const token = jwt.sign(
