@@ -1,13 +1,4 @@
-const jwt = require('jsonwebtoken')
-
 export default (req, res) => {
-  const token = jwt.sign(
-    {
-    name: 'Robertito'
-    },
-    'shhh!itsasecret!',
-  )
-
   res.setPreviewData({
 
   })
